@@ -10,6 +10,6 @@
 
 ## 浏览器模拟微信小程序
 
-通过修改 userAgent 模拟微信小程序
+通过修改 userAgent 模拟微信小程序 `micromessenger-miniprogram`
 
 ![device](./mock.png)

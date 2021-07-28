@@ -1,0 +1,28 @@
+{
+  "name": "Modify Response",
+  "version": "1.0",
+  "description": "Mocdify response",
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "http://127.0.0.1:8081/*",
+        "https://ihealth-test.zhongan.com/*"
+      ],
+      "js": [
+        "./content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    "script/*"
+  ]
+}

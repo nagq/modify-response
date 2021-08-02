@@ -13,7 +13,8 @@
     {
       "matches": [
         "http://127.0.0.1:8081/*",
-        "https://ihealth-test.zhongan.com/*"
+        "https://ihealth-test.zhongan.com/*",
+        "https://ihealth-uat.zhongan.com/*"
       ],
       "js": [
         "./content.js"

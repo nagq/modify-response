@@ -11,7 +11,7 @@ const loadScript = src => {
 
 Promise.all([
   loadScript('script/api_config.js'),
+  loadScript('script/data.js'),
 ]).then(() => {
-  loadScript('script/data.js');
   loadScript('script/main.js');
 }).catch(console.log)

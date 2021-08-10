@@ -83,8 +83,12 @@ const MOCK_API_RES = {
     originalFetch: window.fetch.bind(window),
     myFetch: function(...args) {
         return MOCK_API_RES.originalFetch(...args).then(async (response) => {
-          let matched = MOCK_API_RES.rules().find(({match}) => {
-            return match && response.url.match(new RegExp(match, 'i'));
+          let matched = MOCK_API_RES.rules().find(({match, enable}) => {
+            if (response.url.indexOf('getFamilyMemberList') >= 0) {
+              console.log(response.url, match)
+              console.log(!match && response.url.match(new RegExp(match, 'i')))
+            }
+            return enable !== false && match && response.url.match(new RegExp(match, 'i'));
           })
 
           if (matched) {
